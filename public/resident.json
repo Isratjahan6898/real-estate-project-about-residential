@@ -1,0 +1,89 @@
+[
+    {
+        "id": "RES001",
+        "estate_title": "Spacious Family Home in Suburban Oasis",
+        "segment_name": "Single-family home",
+        "description": "A beautifully designed single-family home offering ample space for a growing family. Situated in a peaceful suburban neighborhood, this home features a large backyard, modern amenities, and proximity to excellent schools and parks.",
+        "price": "$450,000",
+        "status": "sale",
+        "area": "3000 sq ft",
+        "location": "Suburban Neighborhood, City Name",
+        "facilities": ["multiple bedrooms", "backyard", "garage"],
+        "image": "https://i.ibb.co/DRfj31B/32104.jpg",
+        "button": "View Property"
+      },
+
+      {
+        "id": "RES002",
+        "estate_title": "Chic Townhouse with Urban Appeal",
+        "segment_name": "Townhouse",
+        "description": "A stylish townhouse offering a perfect blend of modern design and urban convenience. Located in a vibrant neighborhood, this townhouse features sleek interiors, rooftop terrace, and easy access to shopping, dining, and entertainment.",
+        "price": "$550,000",
+        "status": "sale",
+        "area": "2000 sq ft",
+        "location": "Urban Neighborhood, City Name",
+        "facilities": ["rooftop terrace", "modern kitchen", "attached garage"],
+        "image": "https://i.ibb.co/4K3wRGF/intercom-gate-front-residential-building.jpg",
+        "button": "View Property"
+      },
+      {
+        "id": "RES003",
+        "estate_title": "Luxury Urban Apartment Living",
+        "segment_name": "Apartment",
+        "description": "Experience luxury urban living in this stunning apartment complex. Offering contemporary design, upscale amenities, and breathtaking city views, this apartment is perfect for those seeking convenience and sophistication.",
+        "price": "$2,200/month",
+        "status": "rent",
+        "area": "1200 sq ft",
+        "location": "Downtown, City Name",
+        "facilities": ["fitness center", "swimming pool", "concierge service"],
+        "image": "https://i.ibb.co/kKMdNqR/3d-rendering-loft-luxury-living-room-with-shelf-near-dining-table.jpg",
+        "button": "View Property"
+      },
+
+      {
+        "id": "RES004",
+        "estate_title": "Modern Student Residence Near Campus",
+        "segment_name": "Student housing",
+        "description": "This modern student residence offers convenience and comfort for university students. With furnished rooms, study areas, and communal spaces, it provides an ideal environment for academic success and socializing.",
+        "price": "$800/month (per room)",
+        "status": "rent",
+        "area": "250 sq ft (per room)",
+        "location": "Near University Campus, City Name",
+        "facilities": ["study lounge", "laundry facilities", "24/7 security"],
+        "image": "https://i.ibb.co/3c6rZgB/talking-teens.jpg",
+        "button": "View Property"
+      },
+      {
+        "id": "RES005",
+        "estate_title": "Retirement Living at its Finest",
+        "segment_name": "Senior living community",
+        "description": "Embrace retirement living in this vibrant senior community. With resort-style amenities, social activities, and care services tailored to individual needs, residents can enjoy a fulfilling and enriching lifestyle.",
+        "price": "Starting from $3,000/month",
+        "status": "rent",
+        "area": "Varies",
+        "location": "Senior Community, City Name",
+        "facilities": ["restaurant-style dining", "wellness center", "scheduled transportation"],
+        "image": "https://i.ibb.co/4ZnxFDT/elder-group-friends-partying.jpg",
+        "button": "View Property"
+      },
+
+      {
+        "id": "RES006",
+        "estate_title": "Seaside Escape: Luxury Vacation Rental",
+        "segment_name": "Vacation rental",
+        "description": "Indulge in a luxury seaside escape at this exquisite vacation rental. With panoramic ocean views, private beach access, and luxurious amenities, it's the perfect retreat for a memorable vacation experience.",
+        "price": "Starting from $500/night",
+        "status": "rent",
+        "area": "Varies",
+        "location": "Seaside Location, City Name",
+        "facilities": ["private beach", "infinity pool", "outdoor dining area"],
+        "image": "https://i.ibb.co/qgTZcyQ/light-garden-luxury-pool-nature.jpg",
+        "button": "View Property"
+      }
+      
+      
+      
+      
+      
+      
+]
