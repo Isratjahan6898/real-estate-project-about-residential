@@ -12,6 +12,7 @@ import Home from './Componets/Home/Home';
 import UpdateProfile from './Componets/UpdateProfile/UpdateProfile';
 import UserProfile from './Componets/UserProfile/UserProfile';
 import ErrorPage from './Componets/ErrorPage/ErrorPage';
+import Login from './Componets/Login/Login';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,11 @@ const router = createBrowserRouter([
       {
          path:'/userProfile',
          element:<UserProfile></UserProfile>
+      },
+
+      {
+        path:'/login',
+        element:<Login></Login>
       }
     ]
   },

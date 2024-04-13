@@ -14,14 +14,14 @@ const ShowCard = () => {
      },[])
 
     return (
-        <div className="mt-[30px] mx-[100px] my-[40px]">
+        <div className="mt-[30px] lg:mx-[100px] my-[40px]">
             
 
              <h1 className="text-center font-bold text-4xl">Show Category of Residential</h1>
 
              <p className="text-center mt-[20px] text-slate-500 mb-[20px]">A residential area is a land used in which housing predominates, as opposed to industrial and commercial areas.</p>
 
-             <div className="grid grid-cols-3 gap-[20px]">
+             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px]">
                 {
                     categories.map(category => <CardDetails key={category.id} category={category} ></CardDetails>)
                 }
