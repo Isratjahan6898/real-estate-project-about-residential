@@ -32,7 +32,7 @@ const Navbar = () => {
     </ul>
   </div>
   <div className=" mt-[100px] md:mt-[30px] lg:navbar-end">
-    <Link className="btn mr-[15px] bg-lime-500 text-white font-bold">Button</Link>
+    <Link to='/login' className="btn mr-[15px] bg-lime-500 text-white font-bold">Login</Link>
     <div className="w-10 rounded-full">
           <img className="rounded-full" alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
         </div>
