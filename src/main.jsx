@@ -13,6 +13,7 @@ import UpdateProfile from './Componets/UpdateProfile/UpdateProfile';
 import UserProfile from './Componets/UserProfile/UserProfile';
 import ErrorPage from './Componets/ErrorPage/ErrorPage';
 import Login from './Componets/Login/Login';
+import Registation from './Componets/Registation/Registation';
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,11 @@ const router = createBrowserRouter([
       {
         path:'/login',
         element:<Login></Login>
+      },
+
+      {
+        path:'/register',
+        element:<Registation></Registation>
       }
     ]
   },

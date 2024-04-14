@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 
 
-const Login = () => {
+const Registation = () => {
     return (
-        <div className="mt-[40px]">
+        <div>
+            <div className="mt-[40px]">
             <div className="  bg-base-200">
-  <div className="mx-[30px] lg:w-1/2 lg:mx-[290px] py-[30px] ">
+  <div className="mx-[20px]  lg:w-1/2 lg:mx-[290px] py-[30px] ">
   
     <div className=" shadow-2xl bg-base-100">
       <form className="card-body ">
@@ -44,7 +45,8 @@ const Login = () => {
   </div>
 </div>
         </div>
+        </div>
     );
 };
 
-export default Login;
+export default Registation;
