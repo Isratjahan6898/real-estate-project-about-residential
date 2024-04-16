@@ -1,42 +1,85 @@
 import { Link } from "react-router-dom";
 
 
+
 const Registation = () => {
+
+  const handleRegister = e =>{
+    e.preventDefault ();
+    const form = new FormData(e.currentTarget);
+    const name = form.get ('name');
+    const email = form.get ('email');
+    const photo = form.get ('photo');
+    const password = form.get ('password');
+
+    console.log(name, email, photo, password)
+
+
+
+  }
     return (
         <div>
             <div className="mt-[40px]">
             <div className="  bg-base-200">
+
+               <p className="font-bold pt-[20px] text-5xl text-center  text-blue-800">Please Register</p>
   <div className="mx-[20px]  lg:w-1/2 lg:mx-[290px] py-[30px] ">
   
     <div className=" shadow-2xl bg-base-100">
-      <form className="card-body ">
+      <form onSubmit={handleRegister} className="card-body ">
+
+       
+
+      <div className="form-control">
+          <label className="label">
+            <span className="label-text">Name</span>
+          </label>
+          <input type="text"  name="name" placeholder="name" className="input input-bordered" required />
+        </div>
+
+
+
+
+
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>
           </label>
-          <input type="email" placeholder="email" className="input input-bordered" required />
+          <input type="email" name="email" placeholder="email" className="input input-bordered" required />
         </div>
+
+
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text">Photo Url</span>
+          </label>
+          <input type="text" name="photo" placeholder="photo url" className="input input-bordered" required />
+        </div>
+
+         
         <div className="form-control">
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type="password" placeholder="password" className="input input-bordered" required />
+          <input type="password" name="password" placeholder="password" className="input input-bordered" required />
         
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Login</button>
-        </div>
-        <div className="form-control mt-6">
-          <button className="btn btn-primary">Google-login</button>
+          <button className="btn btn-primary">Register</button>
         </div>
 
-        <div className="form-control mt-6">
-          <button className="btn btn-primary">GitHub login</button>
+
+        <div>
+        <p>Already you have an account??</p>
+
+<Link to='/login'><button className="text-2xl font-bold text-blue-600">Login</button></Link>
+
         </div>
+      
 
-        <p>If you not register yet Plz</p>
+        
 
-        <Link to='/register'><button className="text-2xl font-bold text-blue-600">Registation</button></Link>
+       
         
         
 
