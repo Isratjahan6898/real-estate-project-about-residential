@@ -21,9 +21,9 @@ const Banner = () => {
   <div className="hero-overlay bg-opacity-60"></div>
   <div className="hero-content text-center text-neutral-content">
     <div className="max-w-md">
-      <h1 className="mb-5 text-5xl font-bold animate__animated animate__backInLeft">Hello there</h1>
-      <p className="mb-5 animate__animated animate__backInLeft">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-      <button className="btn font-bold bg-lime-500 animate__animated animate__backInLeft">Show</button>
+      <h1 className="mb-5 text-5xl font-bold animate__animated animate__backInLeft">Single House</h1>
+      <p className="mb-5 animate__animated animate__backInLeft">Single-family homes typically offer greater privacy compared to other types of residential properties due to being standalone structures..</p>
+      <button className="btn font-bold bg-lime-500 animate__animated animate__backInLeft">Show details</button>
     </div>
   </div>
 </div>
@@ -37,9 +37,9 @@ const Banner = () => {
   <div className="hero-overlay bg-opacity-60"></div>
   <div className="hero-content text-center text-neutral-content">
     <div className="max-w-md">
-      <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-      <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-      <button className="btn btn-primary">Get Started</button>
+      <h1 className="mb-5 text-5xl font-bold animate__animated animate__backInLeft">Town House</h1>
+      <p className="mb-5 animate__animated animate__backInLeft"> Townhouses typically share one or more walls with neighboring units, offering a balance between the privacy of single-family homes and the density of apartments..</p>
+      <button className="btn font-bold bg-lime-500 animate__animated animate__backInLeft">Show details</button>
     </div>
   </div>
 </div>
@@ -51,9 +51,9 @@ const Banner = () => {
   <div className="hero-overlay bg-opacity-60"></div>
   <div className="hero-content text-center text-neutral-content">
     <div className="max-w-md">
-      <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-      <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-      <button className="btn btn-primary">Get Started</button>
+      <h1 className="mb-5 text-5xl animate__animated animate__backInLeft font-bold">Apartments</h1>
+      <p className="mb-5 animate__animated animate__backInLeft"> Apartments are typically rented rather than owned, offering flexibility for tenants who may prefer not to commit to homeownership..</p>
+      <button className="btn font-bold bg-lime-500 animate__animated animate__backInLeft">Show details</button>
     </div>
   </div>
 </div>
@@ -66,9 +66,9 @@ const Banner = () => {
   <div className="hero-overlay bg-opacity-60"></div>
   <div className="hero-content text-center text-neutral-content">
     <div className="max-w-md">
-      <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-      <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-      <button className="btn btn-primary">Get Started</button>
+      <h1 className="mb-5 text-5xl font-bold animate__animated animate__backInLeft">Student Housing</h1>
+      <p className="mb-5 animate__animated animate__backInLeft">Student housing is typically located in close proximity to universities and colleges, offering convenience for students attending classes.</p>
+      <button className="btn font-bold bg-lime-500 animate__animated animate__backInLeft">Show details</button>
     </div>
   </div>
 </div>

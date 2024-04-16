@@ -1,7 +1,17 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 
 const Navbar = () => {
+  const {user, logOut} = useContext(AuthContext);
+
+  const handleLogOut = ()=>{
+    logOut()
+    .then ()
+    .catch()
+  }
+
 
   
 
@@ -17,7 +27,8 @@ const Navbar = () => {
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
       <li><NavLink to="/" className={({isActive})=>isActive? 'font-bold text-lime-800 border border-lime-700 ':'font-bold'}>Home</NavLink></li>
       <li><NavLink to='/updateProfile' className={({isActive})=>isActive? 'font-bold border text-lime-800 border-lime-700 ':'font-bold'}>Update Profile</NavLink></li>
-      <li><NavLink to='/userProfile' className={({isActive})=>isActive? 'font-bold text-lime-800k; border border-lime-700 ':'font-bold'}>User Profile</NavLink></li>
+      <li><NavLink to='/contact' className={({isActive})=>isActive? 'font-bold text-lime-800k; border border-lime-700 ':'font-bold'}>Contact</NavLink></li>
+      <li><NavLink to='/blog' className={({isActive})=>isActive? 'font-bold text-lime-800k; border border-lime-700 ':'font-bold'}>Blog</NavLink></li>
       
       </ul>
     </div>
@@ -27,15 +38,28 @@ const Navbar = () => {
     <ul className="menu menu-horizontal">
       <li className="mr-[15px]"><NavLink to='/' className={({isActive})=>isActive? 'font-bold text-lime-800 border border-lime-700 ':'font-bold'}>Home</NavLink></li>
       <li className="mr-[15px]"><NavLink to='/updateProfile' className={({isActive})=>isActive? 'font-bold text-lime-800 border border-lime-700 ':'font-bold'}>Update Profile</NavLink></li>
-      <li ><NavLink  to='/userProfile' className={({isActive})=>isActive? 'font-bold text-lime-800 border border-lime-700 ':'font-bold'}>User Profile</NavLink></li>
+      <li ><NavLink  to='/contact' className={({isActive})=>isActive? 'font-bold text-lime-800 border border-lime-700 ':'font-bold'}>Contact</NavLink></li>
+
+      <li><NavLink to='/blog' className={({isActive})=>isActive? 'font-bold text-lime-800k; border border-lime-700 ':'font-bold'}>Blog</NavLink></li>
       
     </ul>
   </div>
   <div className=" mt-[100px] md:mt-[30px] lg:navbar-end">
-    <Link to='/login' className="btn mr-[15px] bg-lime-500 text-white font-bold">Login</Link>
-    <div className="w-10 rounded-full">
+
+  <div className="w-10 rounded-full">
           <img className="rounded-full" alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
         </div>
+
+
+
+        {
+          user? 
+           <button onClick={handleLogOut} className="btn mr-[15px] bg-lime-500 text-white font-bold">LogOut</button>
+          :
+          <Link to='/login' className="btn mr-[15px] bg-lime-500 text-white font-bold">Login</Link>
+        }
+   
+   
   </div>
 </div>
         </div>

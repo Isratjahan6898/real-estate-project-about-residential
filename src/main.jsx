@@ -10,11 +10,15 @@ import {
 import Root from './Main/Root';
 import Home from './Componets/Home/Home';
 import UpdateProfile from './Componets/UpdateProfile/UpdateProfile';
-import UserProfile from './Componets/UserProfile/UserProfile';
+
 import ErrorPage from './Componets/ErrorPage/ErrorPage';
 import Login from './Componets/Login/Login';
 import Registation from './Componets/Registation/Registation';
 import AuthProvider from './Providers/AuthProvider';
+import Contact from './Componets/Contact/Contact';
+import Blog from './Componets/Blog/Blog';
+import ViewProperty from './Componets/ViewProperty/ViewProperty';
+import PrivateRoute from './Componets/PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -31,9 +35,15 @@ const router = createBrowserRouter([
         element:<UpdateProfile></UpdateProfile>
       },
       {
-         path:'/userProfile',
-         element:<UserProfile></UserProfile>
+         path:'/contact',
+         element:<Contact></Contact>
       },
+
+      {
+        path:'/blog',
+        element:<Blog></Blog>
+     },
+
 
       {
         path:'/login',
@@ -43,6 +53,11 @@ const router = createBrowserRouter([
       {
         path:'/register',
         element:<Registation></Registation>
+      },
+
+      {
+        path:'/category/:id',
+        element:<PrivateRoute><ViewProperty></ViewProperty></PrivateRoute>
       }
     ]
   },

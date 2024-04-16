@@ -1,7 +1,10 @@
 
 import { CiLocationOn } from "react-icons/ci";
+import { Link } from "react-router-dom";
 const CardDetails = ({category}) => {
     //console.log(category)
+
+    const {id}= category;
     return (
         <div>
             <div className="card  bg-base-100 shadow-xl ">
@@ -14,7 +17,11 @@ const CardDetails = ({category}) => {
     <hr className="border-2 text-black"></hr>
     <p className="flex items-center gap-[10px]"><CiLocationOn />{category.area}</p>
     <div className="card-actions">
+      <Link to={`/category/ ${id}`}>
+        
       <button className="btn bg-lime-500 mt-[16px] text-white font-bold">View Property</button>
+      
+      </Link>
     </div>
   </div>
 </div>
