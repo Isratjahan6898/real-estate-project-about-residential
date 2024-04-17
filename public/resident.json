@@ -1,6 +1,6 @@
 [
     {
-        "id": "RES001",
+        "id": "1",
         "estate_title": "Spacious Family Home in Suburban Oasis",
         "segment_name": "Single-family home",
         "description": "A beautifully designed single-family home offering ample space for a growing family. Situated in a peaceful suburban neighborhood, this home features a large backyard, modern amenities, and proximity to excellent schools and parks.",
@@ -14,7 +14,7 @@
       },
 
       {
-        "id": "RES002",
+        "id": "2",
         "estate_title": "Chic Townhouse with Urban Appeal",
         "segment_name": "Townhouse",
         "description": "A stylish townhouse offering a perfect blend of modern design and urban convenience. Located in a vibrant neighborhood, this townhouse features sleek interiors, rooftop terrace, and easy access to shopping, dining, and entertainment.",
@@ -27,7 +27,7 @@
         "button": "View Property"
       },
       {
-        "id": "RES003",
+        "id":"3",
         "estate_title": "Luxury Urban Apartment Living",
         "segment_name": "Apartment",
         "description": "Experience luxury urban living in this stunning apartment complex. Offering contemporary design, upscale amenities, and breathtaking city views, this apartment is perfect for those seeking convenience and sophistication.",
@@ -41,7 +41,7 @@
       },
 
       {
-        "id": "RES004",
+        "id": "4",
         "estate_title": "Modern Student Residence Near Campus",
         "segment_name": "Student housing",
         "description": "This modern student residence offers convenience and comfort for university students. With furnished rooms, study areas, and communal spaces, it provides an ideal environment for academic success and socializing.",
@@ -54,7 +54,7 @@
         "button": "View Property"
       },
       {
-        "id": "RES005",
+        "id": "5",
         "estate_title": "Retirement Living at its Finest",
         "segment_name": "Senior living community",
         "description": "Embrace retirement living in this vibrant senior community. With resort-style amenities, social activities, and care services tailored to individual needs, residents can enjoy a fulfilling and enriching lifestyle.",
@@ -68,7 +68,7 @@
       },
 
       {
-        "id": "RES006",
+        "id": "6",
         "estate_title": "Seaside Escape: Luxury Vacation Rental",
         "segment_name": "Vacation rental",
         "description": "Indulge in a luxury seaside escape at this exquisite vacation rental. With panoramic ocean views, private beach access, and luxurious amenities, it's the perfect retreat for a memorable vacation experience.",

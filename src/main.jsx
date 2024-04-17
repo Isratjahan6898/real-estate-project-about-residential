@@ -57,7 +57,8 @@ const router = createBrowserRouter([
 
       {
         path:'/category/:id',
-        element:<PrivateRoute><ViewProperty></ViewProperty></PrivateRoute>
+        element:<PrivateRoute><ViewProperty></ViewProperty></PrivateRoute>,
+        loader:()=>fetch ('resident.json')
       }
     ]
   },
