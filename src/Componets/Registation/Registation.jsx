@@ -1,21 +1,29 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import {  useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import {  toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { IoMdEyeOff } from "react-icons/io";
+import { IoEye } from "react-icons/io5";
 
 
 
 
 
 const Registation = () => {
+
+  const [registerError, setRegistError]= useState('');
+  // const [success, setSuccess] = useState('')
+  const [showPassword, setShowPassword]= useState (false)
   const {createUser, updateUserProfile }= useContext(AuthContext)
 
   const location= useLocation();
   console.log('location in the login page',location)
   const navigate = useNavigate();
   //console.log(createUser)
-  const form = "/";
+  const from = "/";
 
   const handleRegister = e =>{
     e.preventDefault ();
@@ -24,14 +32,32 @@ const Registation = () => {
     const email = form.get ('email');
     const photo = form.get ('photo');
     const password = form.get ('password');
-
+    setRegistError('');
     console.log(name, email, photo, password)
 
+    if(password.length <6){
+      setRegistError ('password should be 6 character');
+      return;
+    }
+    else if(!/A-Z/.test(password)){
+          
+      setRegistError('At least one upperCase letter need');
+      return;
+    }
+
+    else if (!/[a-z]/.test(password)) {
+      toast.error('Password must contain at least one lowercase letter');
+      return;
+    }
+     
+   
     createUser(email,password, name, photo)
    .then(() =>{
     updateUserProfile (name,photo)
     .then(()=>{
-      navigate(form);
+      // setSuccess('user Successfuly')
+      toast.success("user Create Successfully")
+      navigate(from);
     })
 
 
@@ -42,7 +68,8 @@ const Registation = () => {
    })
 
    .catch(error =>{
-    console.error(error)
+    console.error(error);
+    setRegistError(error.message)
    })
 
 
@@ -88,13 +115,33 @@ const Registation = () => {
         </div>
 
          
-        <div className="form-control">
+        <div className="form-control ">
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type="password" name="password" placeholder="password" className="input input-bordered" required />
-        
+     
+
+          <input 
+          type={showPassword?"text" : "password" }
+          name="password" 
+          placeholder="password" 
+          className="input input-bordered" 
+          required />
+          
+          <span className= "ml-[250px] md:ml-[400px] mt-[-35px] lg:ml-[520px]" onClick={()=> setShowPassword(!showPassword)}>
+
+            {
+              showPassword ? <IoMdEyeOff  className="text-3xl"/> : <IoEye  className="text-3xl"/>
+            }
+          </span>
         </div>
+        {
+          registerError&& <p className="text-red-600">{registerError}</p>
+        }
+
+        {/* {
+          success && toast("Wow so easy!")
+        } */}
         <div className="form-control mt-6">
           <button className="btn btn-primary">Register</button>
         </div>
