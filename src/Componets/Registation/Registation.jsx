@@ -1,14 +1,21 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import {  useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 
 
 
 const Registation = () => {
-  const {createUser}= useContext(AuthContext)
+  const {createUser, updateUserProfile }= useContext(AuthContext)
+
+  const location= useLocation();
+  console.log('location in the login page',location)
+  const navigate = useNavigate();
   //console.log(createUser)
+  const form = "/";
 
   const handleRegister = e =>{
     e.preventDefault ();
@@ -20,10 +27,17 @@ const Registation = () => {
 
     console.log(name, email, photo, password)
 
-    createUser(email,password)
-   .then(result =>{
+    createUser(email,password, name, photo)
+   .then(() =>{
+    updateUserProfile (name,photo)
+    .then(()=>{
+      navigate(form);
+    })
 
-    console.log(result.user)
+
+
+    // console.log(result.user)
+    // navigate(location?.state? location.state: '/');
 
    })
 

@@ -46,17 +46,23 @@ const Navbar = () => {
   </div>
   <div className=" mt-[100px] md:mt-[30px] lg:navbar-end">
 
-  <div className="w-10 rounded-full">
-          <img className="rounded-full" alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-        </div>
+
 
 
 
         {
-          user? 
+          user?.email?
+
+         
+          <div className="flex">
+
+<div className="w-10 rounded-full tooltip" data-tip={user.displayName}>
+          <img className="rounded-full " data-tip="hello" alt="Tailwind CSS Navbar component" src={user.photoURL} />
+        </div>
            <button onClick={handleLogOut} className="btn mr-[15px] bg-lime-500 text-white font-bold">LogOut</button>
-          :
-          <Link to='/login' className="btn mr-[15px] bg-lime-500 text-white font-bold">Login</Link>
+          </div>
+         
+         : <Link to='/login' className="btn mr-[15px] bg-lime-500 text-white font-bold">Login</Link>
         }
    
    

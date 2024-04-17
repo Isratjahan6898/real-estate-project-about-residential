@@ -11,7 +11,8 @@ const Login = () => {
   console.log('location in the login page',location)
   const navigate = useNavigate();
   
-  const { signIn}= useContext(AuthContext)
+  const { signIn, googleLogin, githubLogin}= useContext(AuthContext);
+  console.log(githubLogin)
   const handleLogin = e =>{
     e.preventDefault();
     console.log(e.currentTarget);
@@ -27,7 +28,18 @@ const Login = () => {
    .catch(error=>{
     console.error(error)
    })
+
+
+ 
   }
+
+  const handleSocialLogin = socialProvider =>{
+    socialProvider()
+    .then(result =>{
+      console.log(result.user);
+      navigate(location?.state? location.state: '/');
+    })
+   }
     return (
         <div className="mt-[40px]">
             <div className="  bg-base-200">
@@ -50,24 +62,36 @@ const Login = () => {
           <input type="password" name="password" placeholder="password" className="input input-bordered" required />
         
         </div>
-        <div className="form-control mt-6">
+        <div className="form-control  mt-6">
           <button className="btn btn-primary">Login</button>
         </div>
-        <div className="form-control mt-6">
-          <button className="btn btn-primary">Google-login</button>
-        </div>
+        
 
-        <div className="form-control mt-6">
-          <button className="btn btn-primary">GitHub login</button>
-        </div>
-
-        <p>Do you have an account??? plz</p>
-
-        <Link to='/register'><button className="text-2xl font-bold text-blue-600">Registation</button></Link>
+       
         
         
 
       </form>
+
+  <div className="pb-[30px]">
+  <div className="form-control mx-[30px] mt-6">
+          <button  onClick={()=> handleSocialLogin(googleLogin)}
+          className="btn btn-primary">Google-login</button>
+        </div>
+
+        <div className="form-control mx-[30px] mt-6">
+          <button 
+          onClick={()=> handleSocialLogin(githubLogin)}
+          className="btn btn-primary">GitHub login</button>
+        </div>
+  </div>
+
+<div className="mx-[40px] pb-[40px]">
+
+<p>Do you have an account??? plz</p>
+
+<Link to='/register'><button className="text-2xl font-bold text-blue-600">Registation</button></Link>
+</div>
     </div>
   </div>
 </div>
