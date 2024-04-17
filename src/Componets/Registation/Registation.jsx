@@ -7,6 +7,7 @@ import {  toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { IoMdEyeOff } from "react-icons/io";
 import { IoEye } from "react-icons/io5";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -78,6 +79,11 @@ const Registation = () => {
     return (
         <div>
             <div className="mt-[40px]">
+            <Helmet>
+                <title>
+                    Real Esate |resistation
+                </title>
+            </Helmet>
             <div className="  bg-base-200">
 
                <p className="font-bold pt-[20px] text-5xl text-center  text-blue-800">Please Register</p>

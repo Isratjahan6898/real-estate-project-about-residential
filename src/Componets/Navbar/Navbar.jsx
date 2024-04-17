@@ -57,7 +57,7 @@ const Navbar = () => {
           <div className="flex">
 
 <div className="w-10 rounded-full tooltip" data-tip={user.displayName}>
-          <img className="rounded-full " data-tip="hello" alt="Tailwind CSS Navbar component" src={user.photoURL} />
+          <img className="rounded-full " data-tip="hello" alt="Tailwind CSS Navbar component" src={user ?.photoURL ||"https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" } />
         </div>
            <button onClick={handleLogOut} className="btn mr-[15px] bg-lime-500 text-white font-bold">LogOut</button>
           </div>

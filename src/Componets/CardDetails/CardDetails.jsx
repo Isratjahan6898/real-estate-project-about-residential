@@ -6,8 +6,8 @@ const CardDetails = ({category}) => {
 
     const {id}= category;
     return (
-        <div>
-            <div className="card  bg-base-100 shadow-xl ">
+        <div  >
+            <div  data-aos="fade-up" data-aos-anchor=".other-element"  className="card  bg-base-100 shadow-xl ">
   <figure className="px-10 pt-10">
     <img src={category.image} alt="Shoes" className="rounded-xl" />
   </figure>

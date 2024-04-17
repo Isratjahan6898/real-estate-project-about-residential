@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import {  useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -41,7 +42,16 @@ const Login = () => {
     })
    }
     return (
+
+
+    
         <div className="mt-[40px]">
+
+<Helmet>
+                <title>
+                    Real Esate |Login
+                </title>
+            </Helmet>
             <div className="  bg-base-200">
 
             <p className="font-bold pt-[20px] text-5xl text-center text-blue-800">Please Login</p>

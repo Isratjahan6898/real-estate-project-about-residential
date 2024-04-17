@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useParams, useLoaderData } from "react-router-dom";
 
 
@@ -15,9 +16,15 @@ const ViewProperty = () => {
 
     const {facilities} = card;
     return (
-        <div className="md:mx-[40px] lg:mx-[100px] my-[40px]">
-           <div className="hero  bg-base-200">
-  <div className="hero-content  flex-col lg:flex-row-reverse">
+        <div className="md:mx-[40px] lg:mx-[100px] my-[40px]" >
+            <Helmet>
+                <title>
+                    Real Esate |Card Details
+                </title>
+            </Helmet>
+           <div className="hero  bg-base-200"   >
+  <div  className="hero-content  flex-col lg:flex-row-reverse" >
+  
     <img src={card.image} className="w-full rounded-lg shadow-2xl" />
     <div>
       <h1 className="text-4xl mb-[16px] font-bold">{card.estate_title}</h1>
