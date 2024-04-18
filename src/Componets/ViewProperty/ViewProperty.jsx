@@ -22,6 +22,10 @@ const ViewProperty = () => {
                     Real Esate |Card Details
                 </title>
             </Helmet>
+
+            <div className="mb-[30px]">
+              <img className="w-full h-[400px]" src={card.image} alt="" />
+            </div>
            <div className="hero  bg-base-200"   >
   <div  className="hero-content  flex-col lg:flex-row-reverse" >
   

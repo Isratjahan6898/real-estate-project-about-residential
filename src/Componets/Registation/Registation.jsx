@@ -40,14 +40,14 @@ const Registation = () => {
       setRegistError ('password should be 6 character');
       return;
     }
-    else if(!/A-Z/.test(password)){
+    else if(/A-Z/.test(password)){
           
       setRegistError('At least one upperCase letter need');
       return;
     }
 
     else if (!/[a-z]/.test(password)) {
-      toast.error('Password must contain at least one lowercase letter');
+      setRegistError('Password must contain at least one lowercase letter');
       return;
     }
      
@@ -57,7 +57,7 @@ const Registation = () => {
     updateUserProfile (name,photo)
     .then(()=>{
       // setSuccess('user Successfuly')
-      toast.success("user Create Successfully")
+      toast.success("user resister Create Successfully")
       navigate(from);
     })
 

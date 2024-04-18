@@ -4,7 +4,8 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import {  useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-
+import {  toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Login = () => {
@@ -24,10 +25,12 @@ const Login = () => {
    signIn(email, password)
    .then(result=>{
     console.log(result.user);
+    toast.success("user loging Create Successfully")
     navigate(location?.state? location.state: '/');
    })
    .catch(error=>{
-    console.error(error)
+    console.error(error);
+    toast.error("please give currect information")
    })
 
 
